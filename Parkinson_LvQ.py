@@ -45,7 +45,7 @@ def calc_distance(row1, row2):
 		distance += (row1[i] - row2[i])**2
 	return np.sqrt(distance)
 
-# Locate the best matching unit
+# Locate the best matching unit / minimum unit
 def BMU(codebooks, test_row):
 	distances = list()
 	for codebook in codebooks:

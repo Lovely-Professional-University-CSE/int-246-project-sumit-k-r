@@ -45,10 +45,6 @@ lvq = tk.Button(canvas, text="LVQ ( Linear Vector Quantization )", width=30,
                 font=font_opt, fg="#ffffff", bg="#078a42")
 lvq.grid(row=8, column=3, pady=15)
 
-som = tk.Button(canvas, text="SOM ( Self-Organizing Map )", width=30,
-                font=font_opt, fg="#ffffff", bg="#078a42")
-som.grid(row=9, column=3, pady=15)
-
 space_men = tk.Label(canvas, pady=20, background="black")
 space_men.grid(row=10, column=3, pady=15)
 
