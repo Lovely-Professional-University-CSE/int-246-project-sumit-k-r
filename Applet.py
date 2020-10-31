@@ -44,7 +44,7 @@ svm = tk.Button(canvas, text="SVM ( Support Vector Machine )", width=30,
                 font=font_opt, fg="#ffffff", bg="#078a42",command=SVM)
 svm.grid(row=7, column=3, pady=15)
 
-lvq = tk.Button(canvas, text="LVQ ( Linear Vector Quantization )", width=30,
+lvq = tk.Button(canvas, text="LVQ ( Learning Vector Quantization )", width=30,
                 font=font_opt, fg="#ffffff", bg="#078a42",command=LVQ_train_test)
 lvq.grid(row=8, column=3, pady=15)
 
