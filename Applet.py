@@ -1,23 +1,26 @@
 import tkinter as tk
 import tkinter.font as tk_font
-
+from percept import * 
+from SVM import *
+from LVQ import *
 
 root = tk.Tk()
 root.title("Parkinson's Disease")
-root.geometry("1380x920")
+root.geometry("430x920")
 root.config(background="#000000")
 root.resizable(height="false", width="false")
 fonts = tk_font.Font(family="Bahnschrift SemiBold", size="30")
 font_opt = tk_font.Font(family="Microsoft Sans Serif", size="15")
 
-canvas = tk.Canvas(root, height=960, width=420, bg="black", highlightthickness=1,highlightbackground="black")
+canvas = tk.Canvas(root,width=420, bg="black", highlightthickness=1,highlightbackground="black")
 canvas.grid(row=0, column=0, padx=10, pady=5)
 
 canvas_line = tk.Canvas(root, bg="white", highlightthickness=1,highlightbackground="black",width=1,height=880)
 canvas_line.grid(row=0, column=1, pady=5)
 
-canvas_photo = tk.Canvas(root, height=890, width=900, bg="black", highlightthickness=1,highlightbackground="black")
-canvas_photo.grid(row=0, column=2, padx=15, pady=5)
+"""canvas_photo = tk.Canvas(root, bg="black",height=890, width=900,highlightthickness=1,highlightbackground="black")
+canvas_photo.grid(row=0, column=2, padx=15, pady=5)"""
+
 
 menu_text1 = tk.Label(canvas, text="Parkinson's Disease ", font=fonts,
                       fg="#ffffff", bg="black")
@@ -34,15 +37,15 @@ space_men = tk.Label(canvas, pady=30, background="black")
 space_men.grid(row=5, column=3, pady=15)
 
 per = tk.Button(canvas, text="Perceptron", width=30,
-                font=font_opt, fg="#ffffff", bg="#078a42")
+                font=font_opt, fg="#ffffff", bg="#078a42",command=perceptron)
 per.grid(row=6, column=3, pady=15)
 
 svm = tk.Button(canvas, text="SVM ( Support Vector Machine )", width=30,
-                font=font_opt, fg="#ffffff", bg="#078a42")
+                font=font_opt, fg="#ffffff", bg="#078a42",command=SVM)
 svm.grid(row=7, column=3, pady=15)
 
 lvq = tk.Button(canvas, text="LVQ ( Linear Vector Quantization )", width=30,
-                font=font_opt, fg="#ffffff", bg="#078a42")
+                font=font_opt, fg="#ffffff", bg="#078a42",command=LVQ_train_test)
 lvq.grid(row=8, column=3, pady=15)
 
 space_men = tk.Label(canvas, pady=20, background="black")

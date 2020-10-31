@@ -1,0 +1,1 @@
+font_opt = tk_font.Font(family="Microsoft Sans Serif", size="15")
